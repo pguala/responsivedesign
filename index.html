@@ -20,6 +20,9 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarsExample05">
+                <form role="search" class="d-lg-none">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                </form>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Dolor</a>
@@ -30,27 +33,20 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Amet</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                            aria-expanded="false">Dropdown</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#menu" role="button" aria-expanded="false" aria-controls="menu">Opciones</a>
+                    </li> 
+    
+                    
                 </ul>
-                <form role="search">
+                <form role="search" class="d-none d-lg-block">
                     <input class="form-control" type="search" placeholder="Search" aria-label="Search">
                 </form>
             </div>
         </div>
     </nav>
     <!--Encabezado carousel-->
-    <header class="p-5">
+    <header class="p-5 d-none d-lg-block">
         <h3 class="h3 text-center">Lorem ipsum...</h3>
         <div class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -71,7 +67,7 @@
         <!--Grilla-->
         <div class="row">
             <!--Navegación #2-->
-            <div class="col-4">
+            <div class="col-lg-4 collapse" id="menu">
                 <ul class="list-group list-group-horizontal">
                     <li class="list-group-item list-group-item-action"><a href="#" class="link-dark">Opción 1</a></li>
                 </ul>
@@ -86,7 +82,7 @@
                 </ul>
             </div>
             <!--Párrafos-->
-            <div class="col-8">
+            <div class="col-lg-8">
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In condimentum nisi lorem, ut congue
